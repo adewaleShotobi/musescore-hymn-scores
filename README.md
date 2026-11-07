@@ -23,7 +23,8 @@ It assumes the standard hymnal layout: SATB on two staves, with soprano and alto
 
 ## Requirements
 
-- Claude (the Claude app with skills enabled, Claude Code or Cowork)
+- Claude on any plan, Free included (the Claude app, Claude Code or Cowork). Free plan usage limits are tight, so Pro is best for full or long scores. Claude Code is not available on the Free plan.
+- **Code execution must be switched on.** In the Claude app, go to Settings, then Capabilities, and turn on "Code execution and file creation". The skill will not run without it.
 - MuseScore 4 to open and check the results
 - Python 3, used by the helper scripts. Claude runs these for you.
 
@@ -32,8 +33,8 @@ It assumes the standard hymnal layout: SATB on two staves, with soprano and alto
 ### Claude app (claude.ai / desktop)
 
 1. Download this repository as a ZIP, or zip the `musescore-hymn-scores` folder.
-2. In Claude's settings, find **Skills** and upload the ZIP.
-3. Make sure the skill is switched on.
+2. Go to **Customize > Skills**, click **+** and upload the ZIP.
+3. Make sure the skill is switched on, and that code execution is on under Settings > Capabilities. Start a new chat to use it.
 
 ### Claude Code
 
@@ -48,7 +49,11 @@ To use it in a single project only, put it in that project's `.claude/skills/` f
 
 ## How to use it
 
-Attach or point Claude to your `.mscz` file and ask in plain language. Claude picks up the skill on its own. Example requests:
+Attach your `.mscz` file to edit an existing score, or attach a PDF of a hymn or a tonic sol-fa sheet to build a new score from it. Then ask in plain language. Claude picks up the skill on its own.
+
+PDFs work best when the notes are real text you can select and copy. Scanned or photographed pages, and especially handwritten sol-fa, are much less reliable.
+
+Example requests:
 
 - "Add sol-fa noteheads to this hymn and make the staff slightly bigger without changing the lyric size."
 - "Here are verses 4 to 6. Add them under the existing verses and number every line."
